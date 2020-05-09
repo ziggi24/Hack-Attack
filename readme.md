@@ -4,7 +4,7 @@ The player is standing infront of a mystery machine with many knobs, sliders, bu
 ![wireframe](./wireframes/wireframe.png)
 
 ## Visual Style
-![Visual Style](./wireframes/visualStyle.png)
+![Visual Style](./wireframes/visualStyle.png)[Mechanic #020 - Control Panel by Sean Howard](http://squidi.net/three/entry.php?id=20)
 The game will have the look and feel of early video games with 8/16-bit colors with limited pallettes. Each button, knob, slider, etc will play a sound when activated. The fonts will be pixelated and the screen will be monochrome green.
 
 ## Gameplay 
