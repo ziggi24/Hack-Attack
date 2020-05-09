@@ -15,8 +15,9 @@ The game will essentially play like simon says in the visual style of [Please, D
 It's basically one big UI. I'll have arrays containing all elements of each type, and be able to randomly/procedurally pick the sequence and display it on the screen. The game will then wait for the user to configure the machine the way they think it needs to be configured, then hit launch, which is when the game will check to make sure the inputs are configured according to the sequence. At the very end, if the player beats the game, I want a piece of toast to come up from the top of the machine, implying that this isn't some crazy hacker machine, and is actually a toaster. 
 
 ## Sound Reference 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TVyBV_HC8eg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y4o8zJGNFNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
----
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JRHMJ_zzjnA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Dew Point by Chris Christodoulou for the Risk of Rain OST](https://www.youtube.com/watch?v=TVyBV_HC8eg)
+
+[Apex Beat by Darren Korb of the Transistor OST](https://www.youtube.com/watch?v=y4o8zJGNFNo)
+
+[Wanna Fight by Cliff Martinez for Only God Forgives](https://www.youtube.com/watch?v=JRHMJ_zzjnA)
