@@ -12,7 +12,7 @@ The game will have the look and feel of early video games with 8/16-bit colors w
 
 ### Fonts
 
-I plan on using [Gloria Hallelujah](https://fonts.google.com/specimen/Gloria+Hallelujah) for all of the button lables, to make it seem like they were all written by hand. As for the text on the console display, I originally wanted to find a more pixelated font, but I found this typewriter-style font called [Special Elite](https://fonts.google.com/specimen/Special+Elite) that I think fits well with the overall theme, and with my button font. 
+I plan on using [Gloria Hallelujah](https://fonts.google.com/specimen/Gloria+Hallelujah) for all of the button lables, to make it seem like they were all written by hand. As for the text on the console display, I originally wanted to find a more [pixelated font](https://fonts.google.com/specimen/VT323), but I found this typewriter-style font called [Special Elite](https://fonts.google.com/specimen/Special+Elite) that I think fits well with the overall theme, and with my button font. 
 
 #### [Gloria Hallelujah](https://fonts.google.com/specimen/Gloria+Hallelujah)
 
