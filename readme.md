@@ -16,11 +16,11 @@ I plan on using [Gloria Hallelujah](https://fonts.google.com/specimen/Gloria+Hal
 
 #### [Gloria Hallelujah](https://fonts.google.com/specimen/Gloria+Hallelujah)
 
-![gloria.png](/Users/zach/sei/playground/game-protos/mysteryLauncher/wireframes/gloria.png)
+![gloria.png](./wireframes/gloria.png)
 
 #### [Special Elite](https://fonts.google.com/specimen/Special+Elite)
 
-![specialElite.png](/Users/zach/sei/playground/game-protos/mysteryLauncher/wireframes/specialElite.png)
+![specialElite.png](./wireframes/specialElite.png)
 
 ### Sound Reference
 
