@@ -42,14 +42,15 @@ The game will essentially play like simon says in the visual style of [Please, D
 It's basically one big UI element in the center of the page, with sections of similar button types. I'll have arrays containing all elements of each type, and be able to randomly/procedurally pick the sequence and display it on the screen. The game will then wait for the user to configure the machine the way they think it needs to be configured, then hit launch, which is when the game will check to make sure the inputs are configured according to the sequence. At the very end, if the player beats the game, I want a piece of toast to come up from the top of the machine, implying that this isn't some crazy hacker machine, and is actually a toaster(strech goal). 
 
 ## MVP
+
 - game plays three rounds with different sequences 
 - very basic UI elements and art style
 - play can win the game 
 - player can lose if they run out of time or guess incorrectly 3 times
 - game can reset and be played again from the start without refreshing page
 
+## Strech Goals
 
-## Strech Goals 
 - better looking art, style, layout, etc
 - surprise ending
 - soundtrack 
