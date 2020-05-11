@@ -67,13 +67,15 @@ div.checkboxes > h2{
 }
 div.selectors{
     min-width: 200px;
-    /* margin: 10px; */
     padding: 5px;
     border: 5px solid darkgrey;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+div.selectors > label{
+    padding-top: 15px;
 }
 div.buttons{
     /* margin: 10px; */
