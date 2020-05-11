@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/app.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="nes-text is-primary">Mystery Machine</h1>
+    <div class="the-machine">
+
+        <div class="switches">
+
+        </div>
+        <div class="selectors">
+            <label for="default_select">Attack Framework</label>
+            <div class="nes-select">
+                <select required id="default_select">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="0">botnet</option>
+                    <option value="1">salted hashes</option>
+                    <option value="1">metasploit</option>
+                </select>
+            </div>
+            <label for="default_select">Target</label>
+            <div class="nes-select">
+                <select required id="default_select">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="0">servers</option>
+                    <option value="1">load balancers</option>
+                    <option value="1">internal network</option>
+                </select>
+            </div>
+        </div>
+        <div class="screen">
+            <h3 class="prompt">You must hack the stuff!</h3>
+        </div>
+        <div class="buttons">
+            <button type="button" class="nes-btn is-error">Hack</button>
+            <button type="button" class="nes-btn is-error">Spoof</button>
+            <button type="button" class="nes-btn is-error">Crack</button>
+            <button type="button" class="nes-btn is-error">Inject</button>
+            <button type="button" class="nes-btn is-error">DDoS</button>
+        </div>
+        <div class="launch">
+            <div class="nes-container is-rounded is-dark">
+                <p>Launch attack?</p>
+            </div>
+            <button type="button" class="nes-btn is-warning">Launch</button>
+        </div>
+    </div>
+</body>
+
+</html>

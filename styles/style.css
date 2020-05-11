@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    border-radius: 3px solid black;
+}
+div.buttons {
+    padding: 10px;
+    margin: 5px;
+}
+div.the-machine{
+    background: grey;
+    margin: 20px;
+    display: flex;
+    flex-flow: wrap;
+}
+div.selectors{
+    min-width: 200px;
+    margin: 10px;
+    padding: 5px;
+}
+div.buttons{
+    margin: 10px;
+    padding: 5px;
+}
+div.screen{
+    display: flex;
+    background: greenyellow;
+    border: 5px solid green;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+}
+div.launch{
+    
+}
+div.screen > h3{
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+}
