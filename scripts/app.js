@@ -49,9 +49,14 @@ $('button.start').click(function (event) {
 $('button.reset').click(function (event) {
     console.log("reset Button Pressed!");
     roundsWon = 0;
+    currentAttack = "";
+    currentTarget = "";
+    currentCheckbox = "";
+    currentButton = "";
     $('.rounds').text(`Rounds: ${roundsWon}`)
     $('select.attack-select').val('');
     $('select.target-select').val('');
+    $('input').prop('checked', false);
     $('h3.prompt').text(`Press Start`);
 })
 $('button.launch').click(function (event) {

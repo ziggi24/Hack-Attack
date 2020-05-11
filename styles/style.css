@@ -90,6 +90,19 @@ div.screen-inner{
     text-align: center;
     font-size: 13px;
 }
+div.screen-glow{
+    display: flex;
+    background: rgb(147, 219, 38);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    animation-name: screenGlow;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0,.22,.69,1.14);
+}
 div.launch{
     /* margin: 10px; */
     border: 5px solid darkgrey;
@@ -110,16 +123,26 @@ div.game-controls{
     display: flex;
     flex-direction: column;
 }
-div.game-controls > button{
-
-}
 div.radios{
     /* margin: 10px; */
     border: 5px solid darkgrey;
     text-align: center;
 }
-div.screen-inner > h3{
+div.screen-glow > h3{
     display: inline-block;
+    text-align: center;
     justify-self: center;
     align-self: center;
+}
+@keyframes screenGlow{
+    0% {opacity: 80%}
+    25% {opacity: 87%}
+    27% {opacity: 80%}
+    30% {opacity: 70%}
+    50% {opacity: 75%}
+    60% {opacity: 77%}
+    75% {opacity: 85%}
+    80% {opacity: 90%}
+    90% {opacity: 85%}
+    100% {opacity: 81%}
 }
