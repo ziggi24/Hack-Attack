@@ -79,7 +79,21 @@
                 <button type="button" class="nes-btn is-warning launch">Launch</button>
             </div>
             <div class="game-controls">
-                <button type="button" class="nes-btn start">Start</button>
+                <button type="button" class="nes-btn is-primary"
+                    onclick="document.getElementById('dialog-dark-rounded').showModal();">
+                    Start
+                </button>
+                <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+                    <form method="dialog">
+                        <p class="title">How To Play</p>
+                        <p>Read the instructions on the screen and configure the machine such that you think matches.
+                            When you think you've got the right options, click launch to check. Ready?</p>
+                        <menu class="dialog-menu">
+                            <button class="nes-btn cancel">Not Yet</button>
+                            <button class="nes-btn is-primary start">Ready</button>
+                        </menu>
+                    </form>
+                </dialog>
                 <button type="button" class="nes-btn is-error reset">Reset</button>
                 <span class="nes-text is-primary rounds">Rounds: 0</span>
                 <span class="nes-text is-error timer">Time: 5s</span>

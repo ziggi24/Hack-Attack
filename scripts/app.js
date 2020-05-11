@@ -37,11 +37,22 @@ const randomSeq = function () {
     currentSeq = [attackOptions[Math.floor(Math.random() * attackOptions.length)], targetOptions[Math.floor(Math.random() * targetOptions.length)], checkOptions[Math.floor(Math.random() * checkOptions.length)], buttonOptions[Math.floor(Math.random() * buttonOptions.length)]]
     $('h3.prompt').text(`You must use a ${currentSeq[0]} on the ${currentSeq[1]} to perform a ${currentSeq[2]} ${currentSeq[3]}`)
 }
+const startGame = function () {
+    randomSeq();
+}
 
-/* BUTTON HANDLERS */
+/* EVENT HANDLERS */
 $('button.start').click(function (event) {
     console.log("Start Button Pressed!");
-    randomSeq();
+    startGame();
+})
+$('button.reset').click(function (event) {
+    console.log("reset Button Pressed!");
+    roundsWon = 0;
+    $('.rounds').text(`Rounds: ${roundsWon}`)
+    $('select.attack-select').val('');
+    $('select.target-select').val('');
+    $('h3.prompt').text(`Press Start`);
 })
 $('button.launch').click(function (event) {
     console.log("Launching Attack!");
