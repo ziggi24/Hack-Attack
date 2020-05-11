@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+h1{
+    text-align: center;
+}
 div{
     border-radius: 3px solid black;
 }
@@ -12,17 +15,22 @@ div.buttons {
 div.the-machine{
     background: grey;
     margin: 20px;
+    max-height: 80vh;
+    max-width: 100vw;
     display: flex;
     flex-flow: wrap;
+    border: 5px solid darkgrey
 }
 div.selectors{
     min-width: 200px;
     margin: 10px;
     padding: 5px;
+    border: 5px solid darkgrey;
 }
 div.buttons{
     margin: 10px;
     padding: 5px;
+    border: 5px solid darkgrey;
 }
 div.screen{
     display: flex;
@@ -35,7 +43,13 @@ div.screen{
     font-size: 13px;
 }
 div.launch{
-    
+    margin: 10px;
+    border: 5px solid darkgrey;
+}
+div.radios{
+    margin: 10px;
+    border: 5px solid darkgrey;
+    text-align: center;
 }
 div.screen > h3{
     display: inline-block;
