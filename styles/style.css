@@ -16,6 +16,7 @@ div.the-machine{
     margin: 20px;
     width: 900px;
     height: 90vh;
+    max-height: 506px;
     display: flex;
     flex-flow: row wrap;
     border: 5px solid darkgrey
