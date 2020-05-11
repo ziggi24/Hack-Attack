@@ -7,53 +7,76 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/app.js"></script>
+    <script src="scripts/app.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
     <h1 class="nes-text is-primary">Mystery Machine</h1>
     <div class="the-machine">
-
-        <div class="switches">
-
-        </div>
-        <div class="selectors">
-            <label for="default_select">Attack Framework</label>
-            <div class="nes-select">
-                <select required id="default_select">
-                    <option value="" disabled selected hidden>Select...</option>
-                    <option value="0">botnet</option>
-                    <option value="1">salted hashes</option>
-                    <option value="1">metasploit</option>
-                </select>
+        <section class="top">
+            <div class="selectors">
+                <label for="default_select">Attack Framework</label>
+                <div class="nes-select">
+                    <select required id="default_select">
+                        <option value="" disabled selected hidden>Select...</option>
+                        <option value="0">botnet</option>
+                        <option value="1">salted hashes</option>
+                        <option value="1">metasploit</option>
+                    </select>
+                </div>
+                <label for="default_select">Target</label>
+                <div class="nes-select">
+                    <select required id="default_select">
+                        <option value="" disabled selected hidden>Select...</option>
+                        <option value="0">servers</option>
+                        <option value="1">load balancers</option>
+                        <option value="1">internal network</option>
+                    </select>
+                </div>
             </div>
-            <label for="default_select">Target</label>
-            <div class="nes-select">
-                <select required id="default_select">
-                    <option value="" disabled selected hidden>Select...</option>
-                    <option value="0">servers</option>
-                    <option value="1">load balancers</option>
-                    <option value="1">internal network</option>
-                </select>
+            <div class="screen">
+                <h3 class="prompt">You must hack the stuff!</h3>
             </div>
-        </div>
-        <div class="screen">
-            <h3 class="prompt">You must hack the stuff!</h3>
-        </div>
-        <div class="buttons">
-            <button type="button" class="nes-btn is-error">Hack</button>
-            <button type="button" class="nes-btn is-error">Spoof</button>
-            <button type="button" class="nes-btn is-error">Crack</button>
-            <button type="button" class="nes-btn is-error">Inject</button>
-            <button type="button" class="nes-btn is-error">DDoS</button>
-        </div>
-        <div class="launch">
-            <div class="nes-container is-rounded is-dark">
-                <p>Launch attack?</p>
+            <div class="checkboxes">
+                <h2 class="checkboxes title">Attack Style</h2>
+                <label>
+                    <input type="checkbox" class="nes-checkbox" checked />
+                    <span>Single</span>
+                </label>
+                <label>
+                    <input type="checkbox" class="nes-checkbox" unchecked />
+                    <span>Double</span>
+                </label>
+                <label>
+                    <input type="checkbox" class="nes-checkbox" unchecked />
+                    <span>Swarm</span>
+                </label>
             </div>
-            <button type="button" class="nes-btn is-warning">Launch</button>
-        </div>
+        </section>
+        <section class="bottom">
+            <div class="buttons">
+                <button type="button" class="nes-btn is-error">Hack</button>
+                <button type="button" class="nes-btn is-error">Spoof</button>
+                <button type="button" class="nes-btn is-error">Crack</button>
+                <button type="button" class="nes-btn is-error">Inject</button>
+                <button type="button" class="nes-btn is-error">DDoS</button>
+                <button type="button" class="nes-btn is-error">Bypass</button>
+                <button type="button" class="nes-btn is-error">Ping</button>
+                <button type="button" class="nes-btn is-error">Sniff</button>
+                <button type="button" class="nes-btn is-error">Capture</button>
+                <button type="button" class="nes-btn is-error">Block</button>
+                <button type="button" class="nes-btn is-error">Encrypt</button>
+            </div>
+            <div class="launch">
+                <div class="nes-container is-rounded is-dark">
+                    <p>Launch attack?</p>
+                </div>
+                <button type="button" class="nes-btn is-warning launch">Launch</button>
+            </div>
+        </section>
 
     </div>
 
