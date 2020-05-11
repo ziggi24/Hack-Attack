@@ -4,13 +4,14 @@ const buttonOptions = ["Hack", "Spoof",
     "Ping", "Sniff", "Capture", "Block",
     "Encrypt"];
 const checkOptions = ["Single", "Double", "Swarm"];
-const attackOptions = ["botnet", "salted hashes", "metasploit"];
+const attackOptions = ["botnet", "salted hash", "metasploit"];
 const targetOptions = ["servers", "load balancer", "internal network"];
 let currentSeq = ["botnet", "servers", "Swarm", "DDoS"];
 let currentAttack = "";
 let currentTarget = "";
 let currentCheckbox = "";
 let currentButton = "";
+
 
 const checkSeq = function (seq1, seq2) {
     if (seq1.length != seq2.length) {
@@ -27,12 +28,20 @@ const checkSeq = function (seq1, seq2) {
         return true;
     }
 }
-
+const randomSeq = function () {
+    currentSeq = [attackOptions[Math.floor(Math.random() * attackOptions.length)], targetOptions[Math.floor(Math.random() * targetOptions.length)], checkOptions[Math.floor(Math.random() * checkOptions.length)], buttonOptions[Math.floor(Math.random() * buttonOptions.length)]]
+    $('h3.prompt').text(`You must use a ${currentSeq[0]} on the ${currentSeq[1]} to perform a ${currentSeq[2]} ${currentSeq[3]}`)
+}
+randomSeq();
+console.log(currentSeq);
 $('button.launch').click(function (event) {
     console.log("Launching Attack!");
     console.log(`player selected ${currentAttack}, ${currentTarget}, ${currentCheckbox}, ${currentButton}`);
     let playerSeq = [currentAttack, currentTarget, currentCheckbox, currentButton];
-    checkSeq(playerSeq, currentSeq);
+    if (checkSeq(playerSeq, currentSeq)) {
+        randomSeq();
+    }
+
 })
 $('div.buttons').click(function (event) {
     if ($(event.target).hasClass('nes-btn')) {
