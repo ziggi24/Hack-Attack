@@ -34,53 +34,79 @@ section{
 }
 div.buttons {
     padding: 10px;
-    margin: 5px;
+    /* margin: 5px; */
     max-width: 60%;
     align-items: center;
     justify-content: center;
     align-content: center;
 }
 div.checkboxes{
-    margin: 10px;
+    /* margin: 10px; */
     padding: 5px;
     border: 5px solid darkgrey;
-    width: 200px;
+    width: 222px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 div.checkboxes > h2{
     text-align: center;
 }
 div.selectors{
     min-width: 200px;
-    margin: 10px;
+    /* margin: 10px; */
     padding: 5px;
     border: 5px solid darkgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 div.buttons{
-    margin: 10px;
+    /* margin: 10px; */
     padding: 5px;
     border: 5px solid darkgrey;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
-div.screen{
+div.screen-outer{
+    border: 5px solid darkgrey;
+    background: radial-gradient(grey,#1f1f1f);
+    height: 320px;
+    width: 320px;
+}
+div.screen-inner{
     display: flex;
     background: greenyellow;
     border: 5px solid green;
-    height: 280px;
-    width: 280px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     text-align: center;
     font-size: 13px;
 }
 div.launch{
-    margin: 10px;
+    /* margin: 10px; */
     border: 5px solid darkgrey;
-    justify-content: center;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+div.launch > button{
+    /* display: flex; */
+    align-self: center;
+    justify-self: center;
+    margin-top: 20px;
 }
 div.radios{
-    margin: 10px;
+    /* margin: 10px; */
     border: 5px solid darkgrey;
     text-align: center;
 }
-div.screen > h3{
+div.screen-inner > h3{
     display: inline-block;
     justify-self: center;
     align-self: center;
