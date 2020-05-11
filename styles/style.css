@@ -138,16 +138,17 @@ div.game-controls{
 div.game-controls > button{
     margin: 7px
 }
+div.game-controls > span{
+    margin-left: 5px;
+}
 div.radios{
     /* margin: 10px; */
     border: 5px solid darkgrey;
     text-align: center;
 }
 div.screen-glow > h3{
-    display: inline-block;
-    text-align: center;
-    justify-self: center;
     align-self: center;
+    justify-self: flex-end;
 }
 @keyframes screenGlow{
     0% {opacity: 80%}
