@@ -14,6 +14,7 @@ let currentTarget = "";
 let currentCheckbox = "";
 let currentButton = "";
 let roundsWon = 0;
+let hardMode = false;
 
 /* FUNCTIONS */
 const checkSeq = function (seq1, seq2) {
@@ -37,6 +38,11 @@ const randomSeq = function () {
     currentSeq = [attackOptions[Math.floor(Math.random() * attackOptions.length)], targetOptions[Math.floor(Math.random() * targetOptions.length)], checkOptions[Math.floor(Math.random() * checkOptions.length)], buttonOptions[Math.floor(Math.random() * buttonOptions.length)]]
     $('h3.prompt').text(`You must use a ${currentSeq[0]} on the ${currentSeq[1]} to perform a ${currentSeq[2]} ${currentSeq[3]}`)
 }
+const resetMods = function () {
+    $('div.launch').before($('div.buttons'));
+    $('div.screen-outer').before($('div.selectors'));
+    $('div.checkboxes').before($('div.screen-outer'));
+}
 const startGame = function () {
     randomSeq();
 }
@@ -57,7 +63,8 @@ $('button.reset').click(function (event) {
     $('select.attack-select').val('');
     $('select.target-select').val('');
     $('input').prop('checked', false);
-    $('h3.prompt').text(`Press Start`);
+    $('h3.prompt').text(`Press Start!`);
+    resetMods();
 })
 $('button.launch').click(function (event) {
     console.log("Launching Attack!");
@@ -65,8 +72,23 @@ $('button.launch').click(function (event) {
     let playerSeq = [currentAttack, currentTarget, currentCheckbox, currentButton];
     if (checkSeq(playerSeq, currentSeq)) {
         randomSeq();
+        if (hardMode) {
+            let randShift = Math.floor(Math.random() * 4)
+            if (randShift === 0) {
+                $('div.buttons').before($('div.launch'));
+                $('div.selectors').before($('div.screen-outer'));
+            } else if (randShift === 1) {
+                $('div.screen-outer').before($('div.checkboxes'));
+                $('div.selectors').before($('div.screen-outer'));
+            } else if (randShift === 2) {
+                $('div.launch').before($('div.buttons'));
+                $('div.selectors').before($('div.screen-outer'));
+                $('div.checkboxes').before($('div.screen-outer'));
+            } else if (randShift === 3) {
+                $('div.buttons').before($('div.launch'));
+            }
+        }
     }
-
 })
 $('div.buttons').click(function (event) {
     if ($(event.target).hasClass('nes-btn')) {
