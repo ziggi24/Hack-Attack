@@ -29,7 +29,8 @@ div.the-machine{
     max-height: 506px;
     display: flex;
     flex-flow: row wrap;
-    border: 5px solid darkgrey
+    border: 5px solid darkgrey;
+    border-radius: 5px;
 }
 h1{
     text-align: center;
