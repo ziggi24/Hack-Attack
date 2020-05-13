@@ -1,4 +1,4 @@
-# Mystery Machine - User Stories
+# ~~Mystery Machine~~ Hack Attack - User Stories
 
 ---
 
