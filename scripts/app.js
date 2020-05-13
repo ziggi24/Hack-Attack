@@ -1,6 +1,7 @@
 console.log("connected");
 
 /* GLOBAL VARIABLES */
+const themeAudio = new Audio("assets/music/theme.mp3");
 const button1Audio = new Audio("assets/soundFX/button1.wav");
 const button2Audio = new Audio("assets/soundFX/button2.wav");
 const button3Audio = new Audio("assets/soundFX/button3.wav");
@@ -96,7 +97,6 @@ const setTimer = function () {
 /* EVENT HANDLERS */
 $('button.start').click(function (event) {
     console.log("Start Button Pressed!");
-
     if (!gameActive) {
         gameActive = true;
         timeLeft = 60;
@@ -168,4 +168,7 @@ $('input').on('change', function (event) {
 });
 $('.nes-btn').click(function () {
     randomButtonSound();
-})
+});
+$('span.about').click(function () {
+    document.getElementById('dialog-about').showModal();
+});

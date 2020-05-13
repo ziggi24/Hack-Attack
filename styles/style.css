@@ -16,10 +16,16 @@ footer{
     width: 100%;
     margin-top: auto;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 footer > p{
     align-content: center;
     margin: 5px;
+}
+footer > span{
+    margin: 5px;
+    /* cursor: pointer; */
 }
 div.the-machine{
     background: grey;
