@@ -43,16 +43,14 @@ It's basically one big UI element in the center of the page, with sections of si
 
 ## MVP
 
-- game plays three rounds with different sequences 
-- very basic UI elements and art style
-- play can win the game 
-- player can lose if they run out of time or guess incorrectly 3 times
-- game can reset and be played again from the start without refreshing page
+- ~game plays for 60 seconds and the player can attempt as many sequences as possible~
+- ~very basic UI elements and art style~
+- ~game can be completed and has an end screen that displays score~
+- ~game can reset and be played again from the start without refreshing page~
 
 ## Strech Goals
 
-- better looking art, style, layout, etc
-- surprise ending
+- ~better looking art, style, layout, etc~
 - soundtrack 
-- each button plays a sound when interacted with 
+- ~each button plays a sound when interacted with~
 - more buttons, knobs, dials, etc!
