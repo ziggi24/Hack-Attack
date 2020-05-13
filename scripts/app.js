@@ -14,7 +14,9 @@ let currentTarget = "";
 let currentCheckbox = "";
 let currentButton = "";
 let roundsWon = 0;
-let hardMode = false;
+let timeLeft = 60;
+let hardMode = true;
+let gameActive = false;
 
 /* FUNCTIONS */
 const checkSeq = function (seq1, seq2) {
@@ -43,18 +45,45 @@ const resetMods = function () {
     $('div.screen-outer').before($('div.selectors'));
     $('div.checkboxes').before($('div.screen-outer'));
 }
+const updateTime = function () {
+    $('.timer').text(`Time: ${timeLeft}s`);
+}
 const startGame = function () {
     randomSeq();
+}
+const setTimer = function () {
+    const timer = setInterval(() => {
+        console.log(timeLeft);
+        if (!timeLeft && gameActive) {
+            clearInterval(timer);
+            updateTime();
+            gameActive = false;
+            $('.game-over').text(`Game Over - Score ${roundsWon}`);
+            document.getElementById('dialog-end-screen').showModal();
+        } else {
+            timeLeft--;
+            updateTime();
+        }
+    }, 1000)
 }
 
 /* EVENT HANDLERS */
 $('button.start').click(function (event) {
     console.log("Start Button Pressed!");
-    startGame();
+
+    if (!gameActive) {
+        gameActive = true;
+        timeLeft = 60;
+        startGame();
+        setTimer();
+    }
 })
 $('button.reset').click(function (event) {
     console.log("reset Button Pressed!");
     roundsWon = 0;
+    timeLeft = 0;
+    updateTime();
+    $('.timer').text(`Time: ${timeLeft}s`);
     currentAttack = "";
     currentTarget = "";
     currentCheckbox = "";
