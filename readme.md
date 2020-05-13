@@ -54,3 +54,13 @@ It's basically one big UI element in the center of the page, with sections of si
 - soundtrack 
 - ~each button plays a sound when interacted with~
 - more buttons, knobs, dials, etc!
+
+
+### V1
+[version 1](./wireframes/0.png)
+
+### V2
+[version 2](./wireframes/1.png)
+
+### V3
+[version 3](./wireframes/2.png)
