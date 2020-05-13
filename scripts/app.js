@@ -5,9 +5,9 @@ const buttonOptions = ["Hack", "Spoof",
     "Crack", "Inject", "DDoS", "Bypass",
     "Ping", "Sniff", "Capture", "Block",
     "Encrypt"];
-const checkOptions = ["Single", "Double", "Swarm"];
-const attackOptions = ["botnet", "salted hash", "metasploit"];
-const targetOptions = ["servers", "load balancer", "internal network"];
+const checkOptions = ["Single", "Double", "Swarm", "Isolated", "Loopback"];
+const attackOptions = ["botnet", "salted hash", "metasploit", "ransomware", "trojan horse"];
+const targetOptions = ["DNS servers", "load balancer", "internal network", "local host", "cloud backups", "CEO's laptop"];
 let currentSeq = ["botnet", "servers", "Swarm", "DDoS"];
 let currentAttack = "";
 let currentTarget = "";
@@ -58,8 +58,13 @@ const setTimer = function () {
             clearInterval(timer);
             updateTime();
             gameActive = false;
-            $('.game-over').text(`Game Over - Score ${roundsWon}`);
+            if (roundsWon > 0) {
+                $('.game-over').text(`Game Over - Score ${roundsWon}`);
+            } else {
+                $('.game-over').text(`Game Over`);
+            }
             document.getElementById('dialog-end-screen').showModal();
+            roundsWon = 0;
         } else {
             timeLeft--;
             updateTime();
@@ -80,7 +85,6 @@ $('button.start').click(function (event) {
 })
 $('button.reset').click(function (event) {
     console.log("reset Button Pressed!");
-    roundsWon = 0;
     timeLeft = 0;
     updateTime();
     $('.timer').text(`Time: ${timeLeft}s`);

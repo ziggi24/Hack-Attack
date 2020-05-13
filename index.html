@@ -25,15 +25,20 @@
                         <option value="0">botnet</option>
                         <option value="1">salted hash</option>
                         <option value="2">metasploit</option>
+                        <option value="3">ransomware</option>
+                        <option value="4">trojan horse</option>
                     </select>
                 </div>
                 <label for="default_select">Target</label>
                 <div class="nes-select">
                     <select required class="target-select" id="default_select">
                         <option value="" disabled selected hidden>Select...</option>
-                        <option value="0">servers</option>
+                        <option value="0">DNS servers</option>
                         <option value="1">load balancer</option>
                         <option value="2">internal network</option>
+                        <option value="3">local host</option>
+                        <option value="4">cloud backups</option>
+                        <option value="5">CEO's laptop</option>
                     </select>
                 </div>
             </div>
@@ -57,6 +62,14 @@
                 <label>
                     <input type="checkbox" class="nes-checkbox" unchecked />
                     <span>Swarm</span>
+                </label>
+                <label>
+                    <input type="checkbox" class="nes-checkbox" unchecked />
+                    <span>Isolated</span>
+                </label>
+                <label>
+                    <input type="checkbox" class="nes-checkbox" unchecked />
+                    <span>Loopback</span>
                 </label>
             </div>
         </section>
