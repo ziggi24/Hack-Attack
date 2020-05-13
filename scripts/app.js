@@ -15,7 +15,7 @@ let currentCheckbox = "";
 let currentButton = "";
 let roundsWon = 0;
 let timeLeft = 60;
-let hardMode = true;
+let hardMode = false;
 let gameActive = false;
 
 /* FUNCTIONS */
