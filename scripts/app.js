@@ -1,6 +1,13 @@
 console.log("connected");
 
 /* GLOBAL VARIABLES */
+const button1Audio = new Audio("assets/soundFX/button1.wav");
+const button2Audio = new Audio("assets/soundFX/button2.wav");
+const button3Audio = new Audio("assets/soundFX/button3.wav");
+const button4Audio = new Audio("assets/soundFX/button4.wav");
+const button5Audio = new Audio("assets/soundFX/button5.wav");
+const selectorAudio = new Audio("assets/soundFX/selector.wav");
+const checkboxAudio = new Audio("assets/soundFX/check.wav");
 const buttonOptions = ["Hack", "Spoof",
     "Crack", "Inject", "DDoS", "Bypass",
     "Ping", "Sniff", "Capture", "Block",
@@ -19,6 +26,20 @@ let hardMode = false;
 let gameActive = false;
 
 /* FUNCTIONS */
+const randomButtonSound = function () {
+    const randSeed = Math.floor(Math.random() * 5)
+    if (randSeed === 0) {
+        button1Audio.play();
+    } else if (randSeed === 1) {
+        button2Audio.play();
+    } else if (randSeed === 2) {
+        button3Audio.play();
+    } else if (randSeed === 3) {
+        button4Audio.play();
+    } else {
+        button5Audio.play();
+    }
+}
 const checkSeq = function (seq1, seq2) {
     if (seq1.length != seq2.length) {
         console.log("Not the same");
@@ -130,15 +151,21 @@ $('div.buttons').click(function (event) {
     }
 })
 $('select.attack-select').change(function (event) {
+    selectorAudio.play();
     console.log("clicked " + $(this).children("option:selected").val());
     currentAttack = attackOptions[$(this).children("option:selected").val()];
 })
 $('select.target-select').change(function (event) {
+    selectorAudio.play();
     console.log("clicked " + $(this).children("option:selected").val());
     currentTarget = targetOptions[$(this).children("option:selected").val()];
 })
 $('input').on('change', function (event) {
+    checkboxAudio.play();
     $('input').not(this).prop('checked', false);
     currentCheckbox = $(event.target).next()[0].innerText;
     console.log("checkbox - " + currentCheckbox);
 });
+$('.nes-btn').click(function () {
+    randomButtonSound();
+})
