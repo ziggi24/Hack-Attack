@@ -127,7 +127,7 @@ $('button.launch').click(function (event) {
     if (checkSeq(playerSeq, currentSeq)) {
         randomSeq();
         if (hardMode) {
-            let randShift = Math.floor(Math.random() * 4)
+            let randShift = Math.floor(Math.random() * 6)
             if (randShift === 0) {
                 $('div.buttons').before($('div.launch'));
                 $('div.selectors').before($('div.screen-outer'));
@@ -136,10 +136,16 @@ $('button.launch').click(function (event) {
                 $('div.selectors').before($('div.screen-outer'));
             } else if (randShift === 2) {
                 $('div.launch').before($('div.buttons'));
-                $('div.selectors').before($('div.screen-outer'));
+                $('div.screen-outer').before($('div.selectors'));
                 $('div.checkboxes').before($('div.screen-outer'));
             } else if (randShift === 3) {
                 $('div.buttons').before($('div.launch'));
+            } else if (randShift === 4) {
+                $('div.selectors').before($('div.screen-outer'));
+                $('div.checkboxes').before($('div.screen-outer'));
+            } else if (randShift === 5) {
+                resetMods();
+
             }
         }
     }
