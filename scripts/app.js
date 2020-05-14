@@ -60,7 +60,22 @@ const checkSeq = function (seq1, seq2) {
 }
 const randomSeq = function () {
     currentSeq = [attackOptions[Math.floor(Math.random() * attackOptions.length)], targetOptions[Math.floor(Math.random() * targetOptions.length)], checkOptions[Math.floor(Math.random() * checkOptions.length)], buttonOptions[Math.floor(Math.random() * buttonOptions.length)]]
-    $('h3.prompt').text(`You must use a ${currentSeq[0]} on the ${currentSeq[1]} to perform a ${currentSeq[2]} ${currentSeq[3]}`)
+    if (roundsWon >= 1) {
+        let randSeed = Math.floor(Math.random() * 5);
+        if (randSeed === 0) {
+            $('h3.prompt').text(`You must use a ${currentSeq[0]} on the ${currentSeq[1]} to perform a ${currentSeq[2]} ${currentSeq[3]}`)
+        } else if (randSeed === 1) {
+            $('h3.prompt').text(`Good good, now a ${currentSeq[0]} on the ${currentSeq[1]} to perform a ${currentSeq[2]} ${currentSeq[3]}`)
+        } else if (randSeed === 2) {
+            $('h3.prompt').text(`Activate a ${currentSeq[2]} ${currentSeq[3]} using a ${currentSeq[0]} on the ${currentSeq[1]}`)
+        } else if (randSeed === 3) {
+            $('h3.prompt').text(`Quick, perform a ${currentSeq[2]} ${currentSeq[3]} using a ${currentSeq[0]} on the ${currentSeq[1]}`)
+        } else if (randSeed === 4) {
+            $('h3.prompt').text(`Now it's time for a ${currentSeq[0]} on the ${currentSeq[1]} to perform a ${currentSeq[2]} ${currentSeq[3]}`)
+        }
+    } else {
+        $('h3.prompt').text(`You must use a ${currentSeq[0]} on the ${currentSeq[1]} to perform a ${currentSeq[2]} ${currentSeq[3]}`)
+    }
 }
 const resetMods = function () {
     $('div.launch').before($('div.buttons'));
