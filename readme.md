@@ -64,3 +64,6 @@ It's basically one big UI element in the center of the page, with sections of si
 
 ### V3
 ![version 3](./wireframes/2.png)
+
+### V4 (final)
+![version 4](./wireframes/3.png)
