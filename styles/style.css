@@ -25,7 +25,6 @@ footer > p{
 }
 footer > span{
     margin: 5px;
-    /* cursor: pointer; */
 }
 div.the-machine{
     background: grey;
@@ -53,14 +52,12 @@ section{
 }
 div.buttons {
     padding: 10px;
-    /* margin: 5px; */
     max-width: 55%;
     align-items: center;
     justify-content: center;
     align-content: center;
 }
 div.checkboxes{
-    /* margin: 10px; */
     padding: 5px;
     border: 5px solid darkgrey;
     width: 222px;
@@ -85,7 +82,6 @@ div.selectors > label{
     padding-top: 25px;
 }
 div.buttons{
-    /* margin: 10px; */
     padding: 5px;
     border: 5px solid darkgrey;
     display: flex;
@@ -123,7 +119,6 @@ div.screen-glow{
     animation-timing-function: cubic-bezier(0,.22,.69,1.14);
 }
 div.launch{
-    /* margin: 10px; */
     border: 5px solid darkgrey;
     width: 25%;
     display: flex;
@@ -131,7 +126,6 @@ div.launch{
 }
 
 div.launch > button{
-    /* display: flex; */
     align-self: center;
     justify-self: center;
     margin-top: 10px;
@@ -149,7 +143,6 @@ div.game-controls > span{
     margin-left: 5px;
 }
 div.radios{
-    /* margin: 10px; */
     border: 5px solid darkgrey;
     text-align: center;
 }
